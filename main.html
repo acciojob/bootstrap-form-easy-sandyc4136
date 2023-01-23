@@ -6,65 +6,70 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-	
-	<form>
-		<div class="container" >
-			<div class="row">
-				<div class="class-12">
-					<h1>Internship Form</h1>
-			</div>
-			<div class="row">
-				<div class=" form-group col-4">
+	<h1 class="text-center">Internship Form</h1>
+	<form class="row g-3">
+				<div class="col-md-4">
                         <label  class="form-label"  for="first-name-input">First Name</label>
-                        <input class="form-control" id="first-name-input" type="text" required>
+                        <input class="form-control is-invalid" id="first-name-input" aria-describedby="validationServerFirstNameFeedback" type="text" required>
+						<div class="invalid-feedback" id="validationServerFirstNameFeedback">First name required!</div>
                 </div>
-				<div class="  form-group col-4">
+				<div class="col-md-4">
                         <label class="form-label"  for="last-name-input">Last Name</label>
-                        <input class="form-control" id="last-name-input" type="text" required>
+                        <input class="form-control is-invalid" id="last-name-input" aria-describedby="validationServerLastNameFeedback" type="text" required>
+						<div id="validationServerLastNameFeedback" class="invalid-feedback">
+							Last name required!
+						</div>
                 </div>
-                <div class=" form-group col-4">
+                <div class="col-md-4">
                         <label class="form-label"  for="email-input">Email Address</label>
-                        <input class="form-control" id="email-input" type="email" placeholder="xyz@abc.com" required>
+                        <input class="form-control is-invalid" id="email-input" aria-describedby="validationServerEmailFeedback" type="email" placeholder="xyz@abc.com" required>
+						<div id="validationServerEmailFeedback" class="invalid-feedback">
+						Email required!
+						</div>
                 </div>
-			</div>
-			<div class="row">
-				<div class="form-group col-6">
+				<div class="col-md-6">
 					<label class="form-label"  for="college-input">College</label>
-					<input class="form-control" id="college-input" type="text" required>
+					<input class="form-control is-invalid" id="college-input" aria-describedby="validationServerCollegeFeedback" type="text" required>
+					<div id="validationServerCollegeFeedback" class="invalid-feedback">
+					Please provide a valid college.
+					</div>
 				</div>
-				<div class="form-group col-3">
+				<div class="col-md-3">
 					<label class="form-label"  for="grad-year-select">Graduation Year</label>
-					<select class="form-control" id="grad-year-select" name="2020">
-						<option value="Choose..">Choose..</option>
+					<select class="form-select is-invalid" aria-describedby="ValidationServerGraduationYearFeedback" id="grad-year-select">
+						<option selected disabled value="">Choose..</option>
 						<option value="2020" >2020</option>
 						<option value="2021">2021</option>
 						<option value="2022">2022</option>
 						<option value="2023">2023</option>
 					</select>
+					<div id="validationServerGraduationYearFeedback" class="invalid-feedback">
+					Please select a valid Graduation Year.
+					</div>
 				</div>
-				<div class="form-group col-3">
+				<div class="col-md-3">
 					<label class="form-label" for="roll-no-input">Roll No.</label>
-					<input class="form-control" id="roll-no-input" type="number" required>
+					<input class="form-control is-invalid" id="roll-no-input" type="number" aria-describedby="validationServerRollNumberFeedback" required>
+					<div id="validationServerRollNumberFeedback" class="invalid-feedback">
+					Please provide a valid Roll no.
+					</div>
 				</div>
-			</div>
-			<div class="row">
+				<div class="col-12">
+					<div class="form-check">
+						<input class="form-control is-invalid" type="checkbox" id="conditions-checkbox" aria-describedby="invalidCheckFeedback" required>
+						<label for="form-check-label" for="conditions-checkbox"> Agree to terms and conditions</label>
+						<div id="invalidCheckFeedback" class="invalid-feedback">
+						You must agree before submitting.
+						</div>
+					</div>
+				</div>
 				<div class="form-group col-12">
-					<label class="form-label" for="conditions-checkbox"></label>
-					<input class="form-control" type="checkbox" id="conditions-checkbox" required> Agree to terms and conditions
+					<button class="btn btn-primary">Submit form</button>
 				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-12">
-					<input class="form-control" type="submit">
-				</div>
-			</div>
-		</div>
 	</form>
     <script type="text/javascript" src="./script.js">
 </script>
