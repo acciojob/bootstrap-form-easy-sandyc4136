@@ -40,12 +40,12 @@
 				</div>
 				<div class="col-md-3">
 					<label class="form-label"  for="grad-year-select">Graduation Year</label>
-					<select class="form-select is-invalid" aria-describedby="ValidationServerGraduationYearFeedback" id="grad-year-select">
-						<option selected disabled value="">Choose..</option>
-						<option value="2020" >2020</option>
-						<option value="2021">2021</option>
-						<option value="2022">2022</option>
-						<option value="2023">2023</option>
+					<select class="form-select is-invalid" id="grad-year-select" aria-describedby="ValidationServerGraduationYearFeedback" required >
+						<option selected disabled value=" ">Choose..</option>
+						<option value="">2020</option>
+						<option value="">2021</option>
+						<option value="">2022</option>
+						<option value="">2023</option>
 					</select>
 					<div id="validationServerGraduationYearFeedback" class="invalid-feedback">
 					Please select a valid Graduation Year.
@@ -58,10 +58,10 @@
 					Please provide a valid Roll no.
 					</div>
 				</div>
-				<div class="col-12">
+				<div class="col-md-12">
 					<div class="form-check">
-						<input class="form-control is-invalid" type="checkbox" id="conditions-checkbox" aria-describedby="invalidCheckFeedback" required>
-						<label for="form-check-label" for="conditions-checkbox"> Agree to terms and conditions</label>
+						<input class="form-check-input is-invalid" type="checkbox" id="conditions-checkbox" aria-describedby="invalidCheckFeedback" required>
+						<label class="form-check-label" for="conditions-checkbox"> Agree to terms and conditions</label>
 						<div id="invalidCheckFeedback" class="invalid-feedback">
 						You must agree before submitting.
 						</div>
